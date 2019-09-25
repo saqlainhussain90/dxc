@@ -1,0 +1,33 @@
+<html>
+    <head>
+            <script
+            src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"></script>
+        <script>
+        
+        $(document).ready(function(){
+            var max=140
+            $("input").keypress(function(){
+                max--;
+                if(max>=0){
+                var val=document.getElementById("#a");
+                $("#b").text(max)}
+                else{
+                    $("#a").text("sorry u cant enter more")
+                    $("input").prop('disabled', true);
+
+                }
+                
+            
+        })
+        })
+        
+        </script>
+    </head>
+    <body bgcolor="black" text="orange">
+        Enter: <input type="text">
+        <div id="a">you are left with <span id="b">140</span> letters </div>
+        
+    </body>
+</html>
